@@ -22,3 +22,4 @@
 * Caratteristiche protocollo di accesso SC (mutex, deadlock,...)
 * 2016.02.17 es3
 * 2013.01.28 es 4 archi superflui
+* Condizioni mutex

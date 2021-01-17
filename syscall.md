@@ -59,7 +59,7 @@ Con:
 
 ## Open
 ```
-int open(const char* file, int flags);
+int open(const char* file, int flags, [mode_t mode]);
 ```
 
 **In**
@@ -81,6 +81,8 @@ Apre un file descriptor
 * `O_CREAT`: Crea il file se non esiste
 * `O_APPEND`: Apre il file in append
 
+[`mode`] <= Permessi sul file
+
 **Ritorno**
 * File descriptor
 * `-1`: nel caso di errore
@@ -89,6 +91,10 @@ Apre un file descriptor
 ```
 int read(int fd, void *buff, size_t nbytes);
 ```
+**In**
+
+`unistd.h`
+
 **Comportamento**
 
 Legge byte da un file descriptor

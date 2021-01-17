@@ -332,6 +332,7 @@ Due insiemi di readers
 ```
 n1 = n2 = 0;
 init(me_n1, 1); init(me_n2, 1);
+init(busy, 1);
 ```
 **Reader 1**
 ```
@@ -346,7 +347,7 @@ signal(me_n1);
 wait(me_n1);
     n1--;
     if(n1==0)
-        wait(busy);
+        signal(busy);
 signal(me_n1);
 ```
 **Reader 2**
@@ -362,7 +363,7 @@ signal(me_n2);
 wait(me_n2);
     n2--;
     if(n2==0)
-        wait(busy);
+        signal(busy);
 signal(me_n2);
 ```
 **Writer**
