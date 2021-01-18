@@ -4,10 +4,6 @@
 * **Directory entry**: Mapping filename -> #inode (=hard-link)
 * **Data block**: blocco con dati file
 * **Serializzazione**: Passaggio da struttura dati a stream di byte e viceversa (deserializzazione)
-* **Deadlock**: un processo aspetta una risorse che non riceverà mai => starvation
-* **Filesystem a livelli**
-    * **Ad un livello**: Un unica dir con tutti i file
-    * **A due livelli**: Una dir + n cartelle per n utenti
 
 # Riguardare
 * Priority inversion
